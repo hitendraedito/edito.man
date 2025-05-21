@@ -1,0 +1,279 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #2E8B57, #000000);
+  padding: 20px 400px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+header h1 span {
+  color: #fff;
+}
+
+.tagline {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.social-icons a, .callout a, .contact-info a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #2E8B57;
+}
+
+.callout a, .contact-info a {
+  display: inline-block;
+  padding: 2px 5px;
+}
+
+.callout a:hover, .contact-info a:hover {
+  color: #2E8B57;
+  transform: translateY(-2px);
+}
+
+.callout a::after, .contact-info a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2E8B57;
+  transition: width 0.3s ease;
+}
+
+.callout a:hover::after, .contact-info a:hover::after {
+  width: 100%;
+}
+
+.bio {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  color: white;
+  line-height: 1.6;
+}
+
+.circle-text {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.circle-text::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  border-radius: 15px;
+  animation: fadeIn 2s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.skills {
+  margin-bottom: 2rem;
+}
+
+.skills h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.skill-card {
+  text-align: center;
+  color: white;
+}
+
+.skill-card h3 {
+  margin-bottom: 1rem;
+}
+
+.services {
+  margin-bottom: 2rem;
+}
+
+.shorts {
+  margin-bottom: 2rem;
+}
+
+.shorts h2,
+.long-form h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.shorts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.short-item {
+  text-align: center;
+  color: white;
+}
+
+.video-container {
+  aspect-ratio: 9/16;
+  margin: 1rem auto;
+  max-width: 300px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+}
+
+.video-player {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.video-container:hover .video-controls {
+  opacity: 1;
+}
+
+.play-pause, .mute {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.progress {
+  height: 100%;
+  background: #2E8B57;
+  border-radius: 2px;
+  width: 0%;
+}
+
+.long-form {
+  text-align: center;
+  color: white;
+}
+
+.callout {
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.callout i {
+  margin-right: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  color: white;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+.contact-info i {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  .glass {
+    padding: 1rem;
+  }
+}
